@@ -2,11 +2,7 @@
 
 import { render } from "react-dom";
 import React from "react";
-import {
-    Router,
-    Route,
-    hashHistory
-} from "react-router";
+import { Router, Route, hashHistory } from "react-router";
 import Audience from "./components/Audience.jsx";
 import Speaker from "./components/Speaker.jsx";
 import Board from "./components/Board.jsx";

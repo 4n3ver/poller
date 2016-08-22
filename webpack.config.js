@@ -23,7 +23,7 @@ module.exports = [
             loaders: [
                 {
                     test          : /\.jsx$/,
-                    exclude       : /(node_modules|semantic)/,
+                    exclude       : /(node_modules)/,
                     loader        : "babel",
                     cacheDirectory: true,
                     query         : {
@@ -34,7 +34,8 @@ module.exports = [
                     }
                 }
             ]
-        }
+        },
+        devtool: "source-map"
     },
     {
         name: 'Server Build',
@@ -49,7 +50,7 @@ module.exports = [
             loaders: [
                 {
                     test          : /\.jsx?$/,
-                    exclude       : /(node_modules|semantic)/,
+                    exclude       : /(node_modules)/,
                     loader        : "babel",
                     cacheDirectory: true,
                     query         : {
@@ -69,6 +70,6 @@ module.exports = [
             __filename: false,
             __dirname: false
         },
-        devtool: 'source-map',
+        devtool: "source-map"
     }
 ];

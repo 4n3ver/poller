@@ -8,10 +8,8 @@
 `npm run start`
 
 ## For Developer
-+ Install `nodemon`, `gulp`, and `webpack` globally
-`$ npm install --global nodemon gulp webpack`
-+ Build `semantic-ui`
-`$ cd semantic/ && gulp build && cd ..`
++ Install `nodemon` and `webpack` globally
+`$ npm install --global nodemon webpack`
 + Automatic src transpile on change
 `$ webpack --progress --colors --watch`
 + Automatic restart node server on change
