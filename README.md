@@ -1,11 +1,14 @@
 # Poll-er
 **Poll** info here
 
+## Install Dependencies
+`$ npm install`
+
 ## Build
-`npm run build`
+`$ npm run build`
 
 ## Run
-`npm run start`
+`$ npm run start`
 
 ## For Developer
 + Install `nodemon` and `webpack` globally
@@ -25,7 +28,6 @@
 + Fix `Board` graphs, so that results is ordered
 if the first received answer is *d*, bar that represent *d* will be on the left most
 + **CAS** implement CAS
-
 
 ## Contributors
 + 1
