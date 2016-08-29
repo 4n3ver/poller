@@ -27,15 +27,14 @@ class AskMultipleChoices extends React.Component {
             <div key={i} className="column">
                 <button className="fluid ui compact standard button"
                     onClick={this._selectAnswerHandler.bind(null, choice)}>
-                    {choice}. {this.props.question[choice]}
+                    {choice}. {this.props.question.options[choice]}
                 </button>
             </div>
         );
     }
 
     _setupChoices() {
-        let choices = Object.keys(this.props.question);
-        choices.shift();    // kick the question out of the array, we need the options
+        let choices = Object.keys(this.props.question.options);
         this.setState(
             {
                 choices,
@@ -77,7 +76,7 @@ class AskMultipleChoices extends React.Component {
                             Your answer:
                             <button
                                 className="fluid ui disabled compact standard button">
-                                {this.state.answer}. {this.props.question[this.state.answer]}
+                                {this.state.answer}. {this.props.question.options[this.state.answer]}
                             </button>
                         </div>
                     </Display>

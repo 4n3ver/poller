@@ -5,12 +5,20 @@ import React from "react";
 class Questions extends React.Component {
     constructor(props) {
         super(props);
-        this._bind("_addQuestion", "_ask");
+        this._bind("_addQuestion", "_ask", "_addAnswers");
         this.state = {};    // put get initial state here instead
     }
 
     _ask(question) {
         this.props.emit("ask", question);
+    }
+
+    _addAnswers(q) {
+        return function (opt, i) {
+            return (
+                <div key={i}>{opt}. {q.options[opt]}</div>
+            );
+        }
     }
 
     _addQuestion(q, i) {
@@ -24,12 +32,13 @@ class Questions extends React.Component {
                             {q.question}
                         </div>
                         <p>
-                            {/*correct answer goes here*/}
-                            {q.a}
+                            {/*options goes here*/}
+                            {Object.keys(q.options).map(this._addAnswers(q))}
                         </p>
                     </div>
                     <div className="hidden content">
-                        {/*options goes here*/}
+                        {/*correct answer goes here*/}
+                        {q.answer}. {q.options[q.answer]}
                     </div>
                 </div>
             </div>
