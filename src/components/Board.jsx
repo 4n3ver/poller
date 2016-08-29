@@ -44,7 +44,7 @@ class Board extends React.Component {
                     && this.props.appState.currentQuestion}>
                     <BarChart
                         title={this.props.appState.currentQuestion
-                            ? this.props.appState.currentQuestion.q
+                            ? this.props.appState.currentQuestion.question
                             : null}
                         data={this._makeBarGraph(this.props.appState.results)}
                         width={window.innerWidth * 0.6}

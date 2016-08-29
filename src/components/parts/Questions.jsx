@@ -21,7 +21,7 @@ class Questions extends React.Component {
                     <div className="visible content">
                         <div className="ui medium header">
                             {/*question goes here*/}
-                            {q.q}
+                            {q.question}
                         </div>
                         <p>
                             {/*correct answer goes here*/}

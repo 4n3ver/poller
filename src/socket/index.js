@@ -76,7 +76,7 @@ const setupEventListener = (io) => {
         socket.on("ask", (question) => {
             currentQuestion = question;
             io.sockets.emit("ask", currentQuestion);
-            console.log(`Question asked: ${question.q}`);
+            console.log(`Question asked: ${question.question}`);
         });
         socket.on("answer", function (payload) {
             if (!results[payload.question]) {

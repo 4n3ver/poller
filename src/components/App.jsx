@@ -81,7 +81,7 @@ class App extends React.Component {
     }
 
     _askHandler(question) {
-        console.log(`Speaker asked: ${question.q}`);
+        console.log(`Speaker asked: ${question.question}`);
         sessionStorage.answer = "";
         this.setState(
             {

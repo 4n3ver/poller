@@ -35,7 +35,7 @@ class AskMultipleChoices extends React.Component {
 
     _setupChoices() {
         let choices = Object.keys(this.props.question);
-        choices.shift();    // kick the q out of the array, we need the options
+        choices.shift();    // kick the question out of the array, we need the options
         this.setState(
             {
                 choices,
@@ -64,7 +64,7 @@ class AskMultipleChoices extends React.Component {
                     Question
                 </div>
                 <div id="currentQuestion">
-                    <h3 className="ui header">{this.props.question.q}</h3>
+                    <h3 className="ui header">{this.props.question.question}</h3>
                     <Display if={!this.state.answer}>
                         <div className="ui grid">
                             <div className="two column doubling row">
